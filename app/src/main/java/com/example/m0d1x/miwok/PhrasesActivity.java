@@ -44,9 +44,11 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phrases);
+
+
         listview = (ListView) findViewById(R.id.ListView_phrases);
 
-
+        // Create a list of words
         Phrases.add(new dictionary(getString(R.string.phrase_where_are_you_going), "minto wuksus", R.drawable.question, R.raw.phrase_where_are_you_going));
         Phrases.add(new dictionary(getString(R.string.phrase_whats_your_name), "tinnә oyaase'nә", R.drawable.question, R.raw.phrase_what_is_your_name));
         Phrases.add(new dictionary(getString(R.string.phrase_my_name_is), "oyaaset", R.drawable.question, R.raw.phrase_my_name_is));
@@ -59,15 +61,24 @@ public class PhrasesActivity extends AppCompatActivity {
         Phrases.add(new dictionary(getString(R.string.phrases_come_here), "әnni'nem", R.drawable.question, R.raw.phrase_come_here));
 
 
+        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
+        // There should be a {@link ListView} with the view ID called list, which is declared in the
+        // costum_layout.xml layout file.
         DictionaryAdapter dictionary = new DictionaryAdapter(this, R.layout.costom_layout, Phrases, R.color.category_phrases);
+
+        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
+        // {@link ListView} will display list items for each {@link Word} in the list.
         listview.setAdapter(dictionary);
 
+        // Set a click listener to play the audio when the list item is clicked on
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                releaseMediaPlayer();
 
+                //To release all media files
+
+                releaseMediaPlayer();
                 // Create and setup the {@link MediaPlayer} for the audio resource associated
                 // with the current word
                 mMediaPlayer = MediaPlayer.create(PhrasesActivity.this, Phrases.get(i).getSoundID());

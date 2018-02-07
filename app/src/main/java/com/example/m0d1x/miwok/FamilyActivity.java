@@ -45,6 +45,8 @@ public class FamilyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_family);
         listview = (ListView) findViewById(R.id.ListView_family);
+
+        // Create a list of words
         family.add(new dictionary(getString(R.string.family_father), "әpә", R.drawable.family_father, R.raw.family_father));
         family.add(new dictionary(getString(R.string.family_mother), "әṭa", R.drawable.family_mother, R.raw.family_mother));
         family.add(new dictionary(getString(R.string.family_son), "angsi", R.drawable.family_son, R.raw.family_son));
@@ -57,12 +59,23 @@ public class FamilyActivity extends AppCompatActivity {
         family.add(new dictionary(getString(R.string.family_grandfather), "paapa", R.drawable.family_grandfather, R.raw.family_father));
 
 
+        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
+        // There should be a {@link ListView} with the view ID called list, which is declared in the
+        // costum_layout.xml layout file.
         DictionaryAdapter dictionary = new DictionaryAdapter(this, R.layout.costom_layout, family, R.color.category_family);
+
+        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
+        // {@link ListView} will display list items for each {@link Word} in the list.
         listview.setAdapter(dictionary);
+
+
+        // Set a click listener to play the audio when the list item is clicked on
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //To release all media files
+
                 releaseMediaPlayer();
 
                 // Create and setup the {@link MediaPlayer} for the audio resource associated

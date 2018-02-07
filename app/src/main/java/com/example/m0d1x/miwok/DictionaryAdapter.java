@@ -34,8 +34,7 @@ public class DictionaryAdapter extends ArrayAdapter<dictionary> {
     public static final String tag = "DictionaryAdapter";
     private Context mcontext;
     private int mResource;
-    SoundPool mSoundPool;
-    int mCSoundId = 0;
+
 
     public DictionaryAdapter(Context context, int resource, ArrayList<dictionary> objects, int Color) {
         super(context, resource, objects);
@@ -49,7 +48,6 @@ public class DictionaryAdapter extends ArrayAdapter<dictionary> {
 
 
         // Member Variables
-
         String aword = getItem(i).getWord();
         String atranstation = getItem(i).getTranslate();
         int picid = getItem(i).getPicID();

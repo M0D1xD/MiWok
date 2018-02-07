@@ -78,10 +78,9 @@ public class NumbersActivity extends AppCompatActivity {
         NumberItems.add(new dictionary(getString(R.string.nmber_nine), "wo’e", R.drawable.number_nine, R.raw.number_nine));
         NumberItems.add(new dictionary(getString(R.string.nmber_ten), "na’aacha", R.drawable.number_ten, R.raw.number_ten));
 
-
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // word_list.xml layout file.
+        // costum_layout.xml layout file.
         DictionaryAdapter dictionary = new DictionaryAdapter(this, R.layout.costom_layout, NumberItems, R.color.category_numbers);
 
 
@@ -95,11 +94,14 @@ public class NumbersActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                //To release all media files
                 releaseMediaPlayer();
 
                 // Create and setup the {@link MediaPlayer} for the audio resource associated
                 // with the current word
                 mMediaPlayer = MediaPlayer.create(NumbersActivity.this, NumberItems.get(i).getSoundID());
+
                 // Start the audio file
                 mMediaPlayer.start();
                 mMediaPlayer.setOnCompletionListener(onCompletionListener);

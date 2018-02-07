@@ -50,6 +50,7 @@ public class ColorsActivity extends AppCompatActivity {
 
         listview = (ListView) findViewById(R.id.ListView_colors);
 
+        // Create a list of words
         Colors.add(new dictionary(getString(R.string.color_red), "weṭeṭṭi", R.drawable.color_red, R.raw.color_red));
         Colors.add(new dictionary(getString(R.string.color_green), "chokokki", R.drawable.color_green, R.raw.color_green));
         Colors.add(new dictionary(getString(R.string.color_brown), "ṭakaakki", R.drawable.color_brown, R.raw.color_brown));
@@ -58,7 +59,13 @@ public class ColorsActivity extends AppCompatActivity {
         Colors.add(new dictionary(getString(R.string.color_Dusty_yellow), "ṭopiisә", R.drawable.color_dusty_yellow, R.raw.color_dusty_yellow));
         Colors.add(new dictionary(getString(R.string.color_mustard_yellow), "chiwiiṭә", R.drawable.color_mustard_yellow, R.raw.color_mustard_yellow));
 
+        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
+        // There should be a {@link ListView} with the view ID called list, which is declared in the
+        // costum_layout.xml layout file.
         DictionaryAdapter dictionary = new DictionaryAdapter(this, R.layout.costom_layout, Colors, R.color.category_colors);
+
+        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
+        // {@link ListView} will display list items for each {@link Word} in the list.
         listview.setAdapter(dictionary);
 
         // Set a click listener to play the audio when the list item is clicked on
@@ -66,7 +73,7 @@ public class ColorsActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//To release all media files
+            //To release all media files
                 releaseMediaPlayer();
 
 
