@@ -6,6 +6,7 @@ import android.media.Image;
 import android.media.SoundPool;
 import android.support.annotation.AnimatorRes;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +28,7 @@ public class DictionaryAdapter extends ArrayAdapter<dictionary> {
         ImageView Play;
         TextView Word;
         TextView Transtation;
-
+        View textContainer;
     }
 
     private int mColorResourceId;
@@ -62,15 +63,17 @@ public class DictionaryAdapter extends ArrayAdapter<dictionary> {
         holder.picID = (ImageView) converView.findViewById(R.id.img_pic);
         holder.Word = (TextView) converView.findViewById(R.id.txt_word);
         holder.Transtation = (TextView) converView.findViewById(R.id.txt_translation);
-
+        holder.textContainer = converView.findViewById(R.id.WordAndTranslate);
+        
         converView.setTag(holder);
 
         holder.picID.setImageResource(d.getPicID());
-
+        int color = ContextCompat.getColor(getContext(), mColorResourceId);
+        holder.textContainer.setBackgroundColor(color);
         holder.Word.setText(d.getWord());
         holder.Transtation.setText(d.getTranslate());
-        View textContainer = converView.findViewById(R.id.WordAndTranslate);
-        textContainer.setBackgroundColor(mColorResourceId);
+
+
         return converView;
     }
 }

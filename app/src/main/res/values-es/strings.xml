@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Miwok</string>
+    <string name="category_phrases">Frases</string>
+    <string name="category_colors">Colores</string>
+    <string name="category_numbers">Numbers</string>
+    <string name="category_family">familia</string>
+    <string name="number_one">Uno</string>
+    <string name="number_two">dos</string>
+    <string name="number_three">Tres</string>
+    <string name="number_four">cuatro</string>
+    <string name="number_five">cinco</string>
+    <string name="nmber_six">seis</string>
+    <string name="nmber_seven">siete</string>
+    <string name="nmber_eight">ocho</string>
+    <string name="nmber_nine">nueve</string>
+    <string name="nmber_ten">diez</string>
+</resources>

@@ -8,7 +8,6 @@
     <string name="number_four">Four</string>
     <string name="category_numbers">Numbers</string>
     <string name="category_family">Family Members</string>
-    <string name="category_colors">Colors</string>
     <string name="category_phrases">Phrases</string>
     <string name="number_five">Five</string>
     <string name="nmber_six">Six</string>
@@ -45,5 +44,6 @@
     <string name="color_white">White</string>
     <string name="color_Dusty_yellow">Dusty Yellow</string>
     <string name="color_mustard_yellow">Mustard Yellow</string>
+    <string name="category_colors">Colores</string>
 
 </resources>
