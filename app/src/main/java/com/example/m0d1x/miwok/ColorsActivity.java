@@ -58,7 +58,7 @@ public class ColorsActivity extends AppCompatActivity {
         Colors.add(new dictionary(getString(R.string.color_Dusty_yellow), "ṭopiisә", R.drawable.color_dusty_yellow, R.raw.color_dusty_yellow));
         Colors.add(new dictionary(getString(R.string.color_mustard_yellow), "chiwiiṭә", R.drawable.color_mustard_yellow, R.raw.color_mustard_yellow));
 
-        DictionaryAdapter dictionary = new DictionaryAdapter(this, R.layout.costom_layout, Colors);
+        DictionaryAdapter dictionary = new DictionaryAdapter(this, R.layout.costom_layout, Colors, R.color.category_colors);
         listview.setAdapter(dictionary);
 
         // Set a click listener to play the audio when the list item is clicked on

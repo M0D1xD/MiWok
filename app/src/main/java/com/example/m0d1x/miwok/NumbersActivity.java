@@ -82,7 +82,7 @@ public class NumbersActivity extends AppCompatActivity {
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // word_list.xml layout file.
-        DictionaryAdapter dictionary = new DictionaryAdapter(this, R.layout.costom_layout, NumberItems);
+        DictionaryAdapter dictionary = new DictionaryAdapter(this, R.layout.costom_layout, NumberItems, R.color.category_numbers);
 
 
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the

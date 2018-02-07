@@ -59,7 +59,7 @@ public class PhrasesActivity extends AppCompatActivity {
         Phrases.add(new dictionary(getString(R.string.phrases_come_here), "әnni'nem", R.drawable.question, R.raw.phrase_come_here));
 
 
-        DictionaryAdapter dictionary = new DictionaryAdapter(this, R.layout.costom_layout, Phrases);
+        DictionaryAdapter dictionary = new DictionaryAdapter(this, R.layout.costom_layout, Phrases, R.color.category_phrases);
         listview.setAdapter(dictionary);
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {

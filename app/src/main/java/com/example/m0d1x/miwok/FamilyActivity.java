@@ -57,7 +57,7 @@ public class FamilyActivity extends AppCompatActivity {
         family.add(new dictionary(getString(R.string.family_grandfather), "paapa", R.drawable.family_grandfather, R.raw.family_father));
 
 
-        DictionaryAdapter dictionary = new DictionaryAdapter(this, R.layout.costom_layout, family);
+        DictionaryAdapter dictionary = new DictionaryAdapter(this, R.layout.costom_layout, family, R.color.category_family);
         listview.setAdapter(dictionary);
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 

@@ -30,16 +30,18 @@ public class DictionaryAdapter extends ArrayAdapter<dictionary> {
 
     }
 
+    private int mColorResourceId;
     public static final String tag = "DictionaryAdapter";
     private Context mcontext;
     private int mResource;
     SoundPool mSoundPool;
     int mCSoundId = 0;
 
-    public DictionaryAdapter(Context context, int resource, ArrayList<dictionary> objects) {
+    public DictionaryAdapter(Context context, int resource, ArrayList<dictionary> objects, int Color) {
         super(context, resource, objects);
         this.mcontext = context;
         this.mResource = resource;
+        this.mColorResourceId = Color;
     }
 
     @Override
@@ -52,7 +54,6 @@ public class DictionaryAdapter extends ArrayAdapter<dictionary> {
         String atranstation = getItem(i).getTranslate();
         int picid = getItem(i).getPicID();
         int sound = getItem(i).getSoundID();
-
         dictionary d = new dictionary(aword, atranstation, picid, sound);
 
         //create the view result for showing the animation
@@ -61,7 +62,6 @@ public class DictionaryAdapter extends ArrayAdapter<dictionary> {
         converView = infuLayoutInflater.inflate(mResource, parent, false);
         ViewHolder holder = new ViewHolder();
         holder.picID = (ImageView) converView.findViewById(R.id.img_pic);
-        holder.Play = (ImageView) converView.findViewById(R.id.img_play);
         holder.Word = (TextView) converView.findViewById(R.id.txt_word);
         holder.Transtation = (TextView) converView.findViewById(R.id.txt_translation);
 
@@ -71,7 +71,8 @@ public class DictionaryAdapter extends ArrayAdapter<dictionary> {
 
         holder.Word.setText(d.getWord());
         holder.Transtation.setText(d.getTranslate());
-
+        View textContainer = converView.findViewById(R.id.WordAndTranslate);
+        textContainer.setBackgroundColor(mColorResourceId);
         return converView;
     }
 }
