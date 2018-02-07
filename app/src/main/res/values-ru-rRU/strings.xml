@@ -8,16 +8,16 @@
     <string name="number_one">Один</string>
     <string name="number_two">два</string>
     <string name="number_three">три</string>
-    <string name="number_four">"четыре "</string>
-    <string name="number_five">"пять "</string>
-    <string name="nmber_six">"шесть "</string>
-    <string name="nmber_seven">"семь "</string>
-    <string name="nmber_eight">"восемь "</string>
-    <string name="nmber_nine">"девять   "</string>
-    <string name="nmber_ten">"десять   "</string>
-    <string name="family_mother">"Мать "</string>
-    <string name="family_father">"Отец "</string>
-    <string name="family_daughter">"Дочь "</string>
+    <string name="number_four">"четыре"</string>
+    <string name="number_five">"пять"</string>
+    <string name="nmber_six">"шесть"</string>
+    <string name="nmber_seven">"семь"</string>
+    <string name="nmber_eight">"восемь"</string>
+    <string name="nmber_nine">"девять"</string>
+    <string name="nmber_ten">"десять"</string>
+    <string name="family_mother">"Мать"</string>
+    <string name="family_father">"Отец"</string>
+    <string name="family_daughter">"Дочь"</string>
     <string name="family_grandfather">"Дедушка "</string>
     <string name="family_son">"Сын "</string>
 </resources>

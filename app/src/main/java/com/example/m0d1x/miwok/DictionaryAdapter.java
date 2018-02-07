@@ -64,7 +64,7 @@ public class DictionaryAdapter extends ArrayAdapter<dictionary> {
         holder.Word = (TextView) converView.findViewById(R.id.txt_word);
         holder.Transtation = (TextView) converView.findViewById(R.id.txt_translation);
         holder.textContainer = converView.findViewById(R.id.WordAndTranslate);
-        
+
         converView.setTag(holder);
 
         holder.picID.setImageResource(d.getPicID());
