@@ -75,7 +75,7 @@ public class PhrasesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_phrases);
         //Adding Back Button to our bar
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //Adding Audio manager
 
         mAudioManager = (AudioManager) getSystemService(AUDIO_SERVICE);

@@ -77,7 +77,7 @@ public class FamilyActivity extends AppCompatActivity {
         listview = (ListView) findViewById(R.id.ListView_family);
         //Adding Back Button to our bar
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //Adding Audio manager
 
         mAudioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
