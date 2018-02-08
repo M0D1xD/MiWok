@@ -75,7 +75,8 @@ public class ColorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_colors);
-
+        //Adding Back Button to our bar
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         //Adding Audio manager
 
         mAudioManager = (AudioManager) getSystemService(AUDIO_SERVICE);

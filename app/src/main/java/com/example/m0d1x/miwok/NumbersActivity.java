@@ -90,7 +90,9 @@ public class NumbersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
+        //Adding Back Button to our bar
 
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         //Adding Audio manager
 
         mAudioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
