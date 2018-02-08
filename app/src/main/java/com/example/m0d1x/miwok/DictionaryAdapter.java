@@ -61,13 +61,15 @@ public class DictionaryAdapter extends ArrayAdapter<dictionary> {
         converView = infuLayoutInflater.inflate(mResource, parent, false);
         ViewHolder holder = new ViewHolder();
         holder.picID = (ImageView) converView.findViewById(R.id.img_pic);
+        holder.Play = (ImageView) converView.findViewById(R.id.img_play);
         holder.Word = (TextView) converView.findViewById(R.id.txt_word);
         holder.Transtation = (TextView) converView.findViewById(R.id.txt_translation);
-        holder.textContainer = converView.findViewById(R.id.WordAndTranslate);
+        holder.textContainer = converView.findViewById(R.id.text_container);
 
         converView.setTag(holder);
 
         holder.picID.setImageResource(d.getPicID());
+        holder.Play.setImageResource(R.drawable.ic_play_arrow_white_24dp);
         int color = ContextCompat.getColor(getContext(), mColorResourceId);
         holder.textContainer.setBackgroundColor(color);
         holder.Word.setText(d.getWord());
